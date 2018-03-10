@@ -12,7 +12,10 @@ mkdir -p ~/.config/nvim
 cp ./init.vim ~/.config/nvim/
 
 # install all plug
-nvim -c :PlugInstall -c :q -c :q -c :q
+nvim -c :PlugInstall -c :q -c :q
+
+# activate the color scheme
+sed -i -e 's/" colorscheme/colorscheme/' ~/.config/nvim/init.vim
 
 # install powerline-fonts
 git clone https://github.com/powerline/fonts.git powerline-fonts
