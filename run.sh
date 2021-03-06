@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
+if ! command -v curl >/dev/null; then
+    >&2 echo "curl command not found! Please install curl before trying again."
+    exit 1
+fi
 
 # install neovim
 sudo apt-get install -y neovim
